@@ -1,0 +1,6 @@
+module Pods_NewFeed {
+  umbrella header "Pods-NewFeed-umbrella.h"
+
+  export *
+  module * { export * }
+}
