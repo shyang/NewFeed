@@ -22,11 +22,11 @@ class EntryViewController: UIViewController {
 
     @objc
     func onFeed() {
-        navigationController?.pushViewController(FeedViewController(initialSection: 1), animated: true)
+        navigationController?.pushViewController(TopContainerViewController(initialSection: 1), animated: true)
     }
 
     @objc
     func onCamera() {
-        navigationController?.pushViewController(FeedViewController(initialSection: 0), animated: true)
+        navigationController?.pushViewController(TopContainerViewController(initialSection: 0), animated: true)
     }
 }

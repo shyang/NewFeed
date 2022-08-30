@@ -7,8 +7,10 @@
 
 import UIKit
 
-class FeedSectionController : NSObject {
-
+class FeedSectionController : BaseComponent, SectionController {
+    func registerCellClass(_ tableView: UITableView) {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+    }
 }
 
 extension FeedSectionController : UITableViewDataSource {

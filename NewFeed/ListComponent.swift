@@ -1,80 +1,67 @@
 //
-//  ViewController.swift
+//  ListComponent.swift
 //  NewFeed
 //
-//  Created by shaohua yang on 2022/8/26.
+//  Created by shaohua on 2022/8/30.
 //
 
 import UIKit
-import SnapKit
 
-class FeedViewController: UIViewController {
+class ListComponent: BaseComponent {
 
     var initialSection = 0
-    var sectionControllers: [UITableViewDelegate & UITableViewDataSource] = []
+    var sectionControllers: [SectionController] = []
+    let firstCellHeight: CGFloat = round(UIScreen.main.bounds.height * 0.8)
+    var dragBeginY: CGFloat = 0
 
-    init(initialSection: Int) {
-        super.init(nibName: nil, bundle: nil)
+    required init(context: SimpleContainer) {
+        super.init(context: context)
 
-        self.initialSection = initialSection
-
-        if initialSection == 0 {
-            sectionControllers = [
-                CameraSectionController(),
-                FeedSectionController(),
-            ]
-        } else {
-            sectionControllers = [
-                FeedSectionController(),
-            ]
+        if let data = context.resolveObject(SharedModel.self) {
+            initialSection = data.initialSection
         }
-    }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        let controllers: [SectionController.Type] = initialSection == 0 ? [
+            CameraSectionController.self, // 相机
+            FeedSectionController.self, // 时刻
+        ] : [
+            FeedSectionController.self,
+        ]
+        sectionControllers = controllers.map { $0.init(context: context) }
     }
 
     lazy var tableView: UITableView = {
         let v = UITableView()
         v.dataSource = self
         v.delegate = self
-        v.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        v.register(CameraCell.self, forCellReuseIdentifier: "CameraCell")
+        sectionControllers.forEach { $0.registerCellClass(v) }
         if #available(iOS 11.0, *) {
             v.contentInsetAdjustmentBehavior = .never
         }
         return v
     }()
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+    override func componentDidAppear() {
         // 对 camera section 懒加载
         if initialSection > 0 {
-            sectionControllers.insert(CameraSectionController(), at: 0)
+            let c = CameraSectionController(context: context)
+            c.registerCellClass(tableView)
+            sectionControllers.insert(c, at: 0)
             tableView.reloadData()
             tableView.scrollToRow(at: IndexPath(row: 0, section: 1), at: .top, animated: false)
             dragBeginY = firstCellHeight
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = .white
-        view.addSubview(tableView)
+    override func componentDidLoad() {
+        controller?.view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
-
-    let firstCellHeight: CGFloat = round(UIScreen.main.bounds.height * 0.8)
-
-    var dragBeginY: CGFloat = 0
-
 }
 
-extension FeedViewController : UIScrollViewDelegate {
+extension ListComponent : UIScrollViewDelegate {
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 
@@ -108,7 +95,7 @@ extension FeedViewController : UIScrollViewDelegate {
     }
 }
 
-extension FeedViewController : UITableViewDelegate {
+extension ListComponent : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return sectionControllers[indexPath.section].tableView!(tableView, heightForRowAt: indexPath)
@@ -123,7 +110,7 @@ extension FeedViewController : UITableViewDelegate {
     }
 }
 
-extension FeedViewController : UITableViewDataSource {
+extension ListComponent : UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionControllers.count

@@ -7,7 +7,10 @@
 
 import UIKit
 
-class CameraSectionController : NSObject {
+class CameraSectionController : BaseComponent, SectionController {
+    func registerCellClass(_ tableView: UITableView) {
+        tableView.register(CameraCell.self, forCellReuseIdentifier: "CameraCell")
+    }
 }
 
 extension CameraSectionController : UITableViewDataSource {
