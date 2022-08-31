@@ -8,22 +8,22 @@
 import UIKit
 import SnapKit
 
-class TopContainerViewController: UIViewController {
+class ACFTopContainerViewController: UIViewController {
 
     var context = SimpleContainer()
-    var components: [BaseComponent] = []
+    var components: [ACFBaseComponent] = []
 
     required init(initialSection: Int) {
         super.init(nibName: nil, bundle: nil)
 
-        let data = SharedModel()
+        let data = ACFSharedModel()
         data.initialSection = initialSection
 
-        context.register(data, forType: SharedModel.self)
+        context.register(data, forType: ACFSharedModel.self)
         context.register(self, forType: UIViewController.self)
 
         components = [
-            ListComponent.self, // 时刻列表
+            ACFFeedComponent.self, // 时刻列表
             // NavigationComponent.self 导航栏
         ].map { $0.init(context: context) }
     }

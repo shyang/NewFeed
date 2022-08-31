@@ -7,25 +7,25 @@
 
 import UIKit
 
-class ListComponent: BaseComponent {
+class ACFFeedComponent: ACFBaseComponent {
 
     var initialSection = 0
-    var sectionControllers: [SectionController] = []
+    var sectionControllers: [ACFSectionController] = []
     let firstCellHeight: CGFloat = round(UIScreen.main.bounds.height * 0.8)
     var dragBeginY: CGFloat = 0
 
     required init(context: SimpleContainer) {
         super.init(context: context)
 
-        if let data = context.resolveObject(SharedModel.self) {
+        if let data = context.resolveObject(ACFSharedModel.self) {
             initialSection = data.initialSection
         }
 
-        let controllers: [SectionController.Type] = initialSection == 0 ? [
-            CameraSectionController.self, // 相机
-            FeedSectionController.self, // 时刻
+        let controllers: [ACFSectionController.Type] = initialSection == 0 ? [
+            ACFCameraSectionController.self, // 相机
+            ACFFeedSectionController.self, // 时刻
         ] : [
-            FeedSectionController.self,
+            ACFFeedSectionController.self,
         ]
         sectionControllers = controllers.map { $0.init(context: context) }
     }
@@ -44,7 +44,7 @@ class ListComponent: BaseComponent {
     override func componentDidAppear() {
         // 对 camera section 懒加载
         if initialSection > 0 {
-            let c = CameraSectionController(context: context)
+            let c = ACFCameraSectionController(context: context)
             c.registerCellClass(tableView)
             sectionControllers.insert(c, at: 0)
             tableView.reloadData()
@@ -61,7 +61,7 @@ class ListComponent: BaseComponent {
     }
 }
 
-extension ListComponent : UIScrollViewDelegate {
+extension ACFFeedComponent : UIScrollViewDelegate {
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 
@@ -95,7 +95,7 @@ extension ListComponent : UIScrollViewDelegate {
     }
 }
 
-extension ListComponent : UITableViewDelegate {
+extension ACFFeedComponent : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return sectionControllers[indexPath.section].tableView!(tableView, heightForRowAt: indexPath)
@@ -110,7 +110,7 @@ extension ListComponent : UITableViewDelegate {
     }
 }
 
-extension ListComponent : UITableViewDataSource {
+extension ACFFeedComponent : UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionControllers.count

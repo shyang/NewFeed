@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BaseComponent : NSObject {
+class ACFBaseComponent : NSObject {
 
     private(set) weak var context: SimpleContainer!
     private(set) weak var controller: UIViewController!

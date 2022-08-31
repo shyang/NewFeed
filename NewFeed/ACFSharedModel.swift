@@ -7,6 +7,6 @@
 
 import UIKit
 
-class SharedModel {
+class ACFSharedModel {
     var initialSection = 0
 }

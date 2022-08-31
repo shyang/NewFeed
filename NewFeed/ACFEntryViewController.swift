@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EntryViewController: UIViewController {
+class ACFEntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,11 @@ class EntryViewController: UIViewController {
 
     @objc
     func onFeed() {
-        navigationController?.pushViewController(TopContainerViewController(initialSection: 1), animated: true)
+        navigationController?.pushViewController(ACFTopContainerViewController(initialSection: 1), animated: true)
     }
 
     @objc
     func onCamera() {
-        navigationController?.pushViewController(TopContainerViewController(initialSection: 0), animated: true)
+        navigationController?.pushViewController(ACFTopContainerViewController(initialSection: 0), animated: true)
     }
 }

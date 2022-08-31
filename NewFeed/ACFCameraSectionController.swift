@@ -7,13 +7,13 @@
 
 import UIKit
 
-class CameraSectionController : BaseComponent, SectionController {
+class ACFCameraSectionController : ACFBaseComponent, ACFSectionController {
     func registerCellClass(_ tableView: UITableView) {
-        tableView.register(CameraCell.self, forCellReuseIdentifier: "CameraCell")
+        tableView.register(ACFCameraCell.self, forCellReuseIdentifier: "CameraCell")
     }
 }
 
-extension CameraSectionController : UITableViewDataSource {
+extension ACFCameraSectionController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -27,20 +27,20 @@ extension CameraSectionController : UITableViewDataSource {
 
 }
 
-extension CameraSectionController : UITableViewDelegate {
+extension ACFCameraSectionController : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return round(UIScreen.main.bounds.height * 0.8)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cameraCell = cell as? CameraCell {
+        if let cameraCell = cell as? ACFCameraCell {
             cameraCell.cellWillAppear()
         }
     }
 
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cameraCell = cell as? CameraCell {
+        if let cameraCell = cell as? ACFCameraCell {
             cameraCell.cellWillDisappear()
         }
     }

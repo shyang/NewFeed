@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CameraCell: UITableViewCell {
+class ACFCameraCell: UITableViewCell {
 
-    let cameraVC = CameraViewController()
+    let cameraVC = ACFCameraViewController()
     var viewLoaded = false
 
     func cellWillAppear() {

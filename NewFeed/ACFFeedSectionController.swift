@@ -7,13 +7,13 @@
 
 import UIKit
 
-class FeedSectionController : BaseComponent, SectionController {
+class ACFFeedSectionController : ACFBaseComponent, ACFSectionController {
     func registerCellClass(_ tableView: UITableView) {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
 }
 
-extension FeedSectionController : UITableViewDataSource {
+extension ACFFeedSectionController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -32,7 +32,7 @@ extension FeedSectionController : UITableViewDataSource {
     }
 }
 
-extension FeedSectionController : UITableViewDelegate {
+extension ACFFeedSectionController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 4:3
         if indexPath.row % 2 == 0 {

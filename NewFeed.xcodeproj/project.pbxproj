@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		4BA35C2577391A9E86C4F9F9 /* libPods-NewFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3C47168B6410D7371A184B /* libPods-NewFeed.a */; };
 		AD7CC9F528B8B93E00595DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CC9F428B8B93E00595DD4 /* AppDelegate.swift */; };
-		AD7CC9F928B8B93E00595DD4 /* TopContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CC9F828B8B93E00595DD4 /* TopContainerViewController.swift */; };
+		AD7CC9F928B8B93E00595DD4 /* ACFTopContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CC9F828B8B93E00595DD4 /* ACFTopContainerViewController.swift */; };
 		AD7CC9FE28B8B94000595DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7CC9FD28B8B94000595DD4 /* Assets.xcassets */; };
 		AD7CCA0128B8B94000595DD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7CC9FF28B8B94000595DD4 /* LaunchScreen.storyboard */; };
-		ADEFCAB628BDEE010054F9AB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB528BDEE010054F9AB /* CameraViewController.swift */; };
-		ADEFCAB828BDEE5D0054F9AB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB728BDEE5D0054F9AB /* EntryViewController.swift */; };
-		ADEFCABA28BDEF8F0054F9AB /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB928BDEF8F0054F9AB /* CameraCell.swift */; };
-		ADEFCABC28BDF6640054F9AB /* CameraSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCABB28BDF6640054F9AB /* CameraSectionController.swift */; };
-		ADEFCABE28BDF66F0054F9AB /* FeedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCABD28BDF66F0054F9AB /* FeedSectionController.swift */; };
-		ADEFCAC228BE57170054F9AB /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC128BE57170054F9AB /* SectionController.swift */; };
-		ADEFCAC628BE590F0054F9AB /* BaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC528BE590F0054F9AB /* BaseComponent.swift */; };
-		ADEFCAC828BE59620054F9AB /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC728BE59620054F9AB /* ListComponent.swift */; };
+		ADEFCAB628BDEE010054F9AB /* ACFCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB528BDEE010054F9AB /* ACFCameraViewController.swift */; };
+		ADEFCAB828BDEE5D0054F9AB /* ACFEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB728BDEE5D0054F9AB /* ACFEntryViewController.swift */; };
+		ADEFCABA28BDEF8F0054F9AB /* ACFCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB928BDEF8F0054F9AB /* ACFCameraCell.swift */; };
+		ADEFCABC28BDF6640054F9AB /* ACFCameraSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCABB28BDF6640054F9AB /* ACFCameraSectionController.swift */; };
+		ADEFCABE28BDF66F0054F9AB /* ACFFeedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCABD28BDF66F0054F9AB /* ACFFeedSectionController.swift */; };
+		ADEFCAC228BE57170054F9AB /* ACFSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC128BE57170054F9AB /* ACFSectionController.swift */; };
+		ADEFCAC628BE590F0054F9AB /* ACFBaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC528BE590F0054F9AB /* ACFBaseComponent.swift */; };
+		ADEFCAC828BE59620054F9AB /* ACFFeedComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC728BE59620054F9AB /* ACFFeedComponent.swift */; };
 		ADEFCACA28BE5CB70054F9AB /* SimpleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAC928BE5CB70054F9AB /* SimpleContainer.swift */; };
-		ADEFCACC28BE5E7F0054F9AB /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCACB28BE5E7F0054F9AB /* SharedModel.swift */; };
+		ADEFCACC28BE5E7F0054F9AB /* ACFSharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCACB28BE5E7F0054F9AB /* ACFSharedModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,20 +30,20 @@
 		7EF5CD065073A9EE5D5B65F3 /* Pods-NewFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewFeed.debug.xcconfig"; path = "Target Support Files/Pods-NewFeed/Pods-NewFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		AD7CC9F128B8B93E00595DD4 /* NewFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7CC9F428B8B93E00595DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD7CC9F828B8B93E00595DD4 /* TopContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopContainerViewController.swift; sourceTree = "<group>"; };
+		AD7CC9F828B8B93E00595DD4 /* ACFTopContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFTopContainerViewController.swift; sourceTree = "<group>"; };
 		AD7CC9FD28B8B94000595DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7CCA0028B8B94000595DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7CCA0228B8B94000595DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADEFCAB528BDEE010054F9AB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		ADEFCAB728BDEE5D0054F9AB /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
-		ADEFCAB928BDEF8F0054F9AB /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
-		ADEFCABB28BDF6640054F9AB /* CameraSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSectionController.swift; sourceTree = "<group>"; };
-		ADEFCABD28BDF66F0054F9AB /* FeedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionController.swift; sourceTree = "<group>"; };
-		ADEFCAC128BE57170054F9AB /* SectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
-		ADEFCAC528BE590F0054F9AB /* BaseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseComponent.swift; sourceTree = "<group>"; };
-		ADEFCAC728BE59620054F9AB /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
+		ADEFCAB528BDEE010054F9AB /* ACFCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFCameraViewController.swift; sourceTree = "<group>"; };
+		ADEFCAB728BDEE5D0054F9AB /* ACFEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFEntryViewController.swift; sourceTree = "<group>"; };
+		ADEFCAB928BDEF8F0054F9AB /* ACFCameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFCameraCell.swift; sourceTree = "<group>"; };
+		ADEFCABB28BDF6640054F9AB /* ACFCameraSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFCameraSectionController.swift; sourceTree = "<group>"; };
+		ADEFCABD28BDF66F0054F9AB /* ACFFeedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFFeedSectionController.swift; sourceTree = "<group>"; };
+		ADEFCAC128BE57170054F9AB /* ACFSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFSectionController.swift; sourceTree = "<group>"; };
+		ADEFCAC528BE590F0054F9AB /* ACFBaseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFBaseComponent.swift; sourceTree = "<group>"; };
+		ADEFCAC728BE59620054F9AB /* ACFFeedComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFFeedComponent.swift; sourceTree = "<group>"; };
 		ADEFCAC928BE5CB70054F9AB /* SimpleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleContainer.swift; sourceTree = "<group>"; };
-		ADEFCACB28BE5E7F0054F9AB /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
+		ADEFCACB28BE5E7F0054F9AB /* ACFSharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFSharedModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,22 +97,30 @@
 			isa = PBXGroup;
 			children = (
 				AD7CC9F428B8B93E00595DD4 /* AppDelegate.swift */,
-				ADEFCACB28BE5E7F0054F9AB /* SharedModel.swift */,
-				AD7CC9F828B8B93E00595DD4 /* TopContainerViewController.swift */,
+				AD975D3D28BF4CC20054F9AB /* ACF */,
 				AD7CC9FD28B8B94000595DD4 /* Assets.xcassets */,
 				AD7CC9FF28B8B94000595DD4 /* LaunchScreen.storyboard */,
 				AD7CCA0228B8B94000595DD4 /* Info.plist */,
-				ADEFCAB528BDEE010054F9AB /* CameraViewController.swift */,
-				ADEFCAB728BDEE5D0054F9AB /* EntryViewController.swift */,
-				ADEFCAB928BDEF8F0054F9AB /* CameraCell.swift */,
-				ADEFCABB28BDF6640054F9AB /* CameraSectionController.swift */,
-				ADEFCABD28BDF66F0054F9AB /* FeedSectionController.swift */,
-				ADEFCAC128BE57170054F9AB /* SectionController.swift */,
-				ADEFCAC528BE590F0054F9AB /* BaseComponent.swift */,
-				ADEFCAC728BE59620054F9AB /* ListComponent.swift */,
 				ADEFCAC928BE5CB70054F9AB /* SimpleContainer.swift */,
 			);
 			path = NewFeed;
+			sourceTree = "<group>";
+		};
+		AD975D3D28BF4CC20054F9AB /* ACF */ = {
+			isa = PBXGroup;
+			children = (
+				ADEFCACB28BE5E7F0054F9AB /* ACFSharedModel.swift */,
+				AD7CC9F828B8B93E00595DD4 /* ACFTopContainerViewController.swift */,
+				ADEFCAB528BDEE010054F9AB /* ACFCameraViewController.swift */,
+				ADEFCAB728BDEE5D0054F9AB /* ACFEntryViewController.swift */,
+				ADEFCAB928BDEF8F0054F9AB /* ACFCameraCell.swift */,
+				ADEFCABB28BDF6640054F9AB /* ACFCameraSectionController.swift */,
+				ADEFCABD28BDF66F0054F9AB /* ACFFeedSectionController.swift */,
+				ADEFCAC128BE57170054F9AB /* ACFSectionController.swift */,
+				ADEFCAC528BE590F0054F9AB /* ACFBaseComponent.swift */,
+				ADEFCAC728BE59620054F9AB /* ACFFeedComponent.swift */,
+			);
+			name = ACF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,18 +219,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEFCAC628BE590F0054F9AB /* BaseComponent.swift in Sources */,
-				AD7CC9F928B8B93E00595DD4 /* TopContainerViewController.swift in Sources */,
-				ADEFCAC828BE59620054F9AB /* ListComponent.swift in Sources */,
-				ADEFCABE28BDF66F0054F9AB /* FeedSectionController.swift in Sources */,
-				ADEFCAB828BDEE5D0054F9AB /* EntryViewController.swift in Sources */,
-				ADEFCAC228BE57170054F9AB /* SectionController.swift in Sources */,
-				ADEFCABC28BDF6640054F9AB /* CameraSectionController.swift in Sources */,
-				ADEFCACC28BE5E7F0054F9AB /* SharedModel.swift in Sources */,
+				ADEFCAC628BE590F0054F9AB /* ACFBaseComponent.swift in Sources */,
+				AD7CC9F928B8B93E00595DD4 /* ACFTopContainerViewController.swift in Sources */,
+				ADEFCAC828BE59620054F9AB /* ACFFeedComponent.swift in Sources */,
+				ADEFCABE28BDF66F0054F9AB /* ACFFeedSectionController.swift in Sources */,
+				ADEFCAB828BDEE5D0054F9AB /* ACFEntryViewController.swift in Sources */,
+				ADEFCAC228BE57170054F9AB /* ACFSectionController.swift in Sources */,
+				ADEFCABC28BDF6640054F9AB /* ACFCameraSectionController.swift in Sources */,
+				ADEFCACC28BE5E7F0054F9AB /* ACFSharedModel.swift in Sources */,
 				AD7CC9F528B8B93E00595DD4 /* AppDelegate.swift in Sources */,
 				ADEFCACA28BE5CB70054F9AB /* SimpleContainer.swift in Sources */,
-				ADEFCAB628BDEE010054F9AB /* CameraViewController.swift in Sources */,
-				ADEFCABA28BDEF8F0054F9AB /* CameraCell.swift in Sources */,
+				ADEFCAB628BDEE010054F9AB /* ACFCameraViewController.swift in Sources */,
+				ADEFCABA28BDEF8F0054F9AB /* ACFCameraCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-protocol SectionController: BaseComponent, UITableViewDelegate, UITableViewDataSource {
+protocol ACFSectionController: ACFBaseComponent, UITableViewDelegate, UITableViewDataSource {
     func registerCellClass(_ tableView: UITableView)
 }
