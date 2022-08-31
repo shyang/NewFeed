@@ -24,6 +24,7 @@ class ACFTopContainerViewController: UIViewController {
 
         components = [
             ACFFeedComponent.self, // 时刻列表
+            ACFPagingComponent.self,
             // NavigationComponent.self 导航栏
         ].map { $0.init(context: context) }
     }

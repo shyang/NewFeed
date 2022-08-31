@@ -12,6 +12,7 @@
 		AD7CC9F928B8B93E00595DD4 /* ACFTopContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7CC9F828B8B93E00595DD4 /* ACFTopContainerViewController.swift */; };
 		AD7CC9FE28B8B94000595DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7CC9FD28B8B94000595DD4 /* Assets.xcassets */; };
 		AD7CCA0128B8B94000595DD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7CC9FF28B8B94000595DD4 /* LaunchScreen.storyboard */; };
+		AD975D3F28BF4DAD0054F9AB /* ACFPagingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD975D3E28BF4DAD0054F9AB /* ACFPagingComponent.swift */; };
 		ADEFCAB628BDEE010054F9AB /* ACFCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB528BDEE010054F9AB /* ACFCameraViewController.swift */; };
 		ADEFCAB828BDEE5D0054F9AB /* ACFEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB728BDEE5D0054F9AB /* ACFEntryViewController.swift */; };
 		ADEFCABA28BDEF8F0054F9AB /* ACFCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFCAB928BDEF8F0054F9AB /* ACFCameraCell.swift */; };
@@ -34,6 +35,7 @@
 		AD7CC9FD28B8B94000595DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7CCA0028B8B94000595DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7CCA0228B8B94000595DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD975D3E28BF4DAD0054F9AB /* ACFPagingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFPagingComponent.swift; sourceTree = "<group>"; };
 		ADEFCAB528BDEE010054F9AB /* ACFCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFCameraViewController.swift; sourceTree = "<group>"; };
 		ADEFCAB728BDEE5D0054F9AB /* ACFEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFEntryViewController.swift; sourceTree = "<group>"; };
 		ADEFCAB928BDEF8F0054F9AB /* ACFCameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACFCameraCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				ADEFCAC128BE57170054F9AB /* ACFSectionController.swift */,
 				ADEFCAC528BE590F0054F9AB /* ACFBaseComponent.swift */,
 				ADEFCAC728BE59620054F9AB /* ACFFeedComponent.swift */,
+				AD975D3E28BF4DAD0054F9AB /* ACFPagingComponent.swift */,
 			);
 			name = ACF;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				ADEFCAC628BE590F0054F9AB /* ACFBaseComponent.swift in Sources */,
 				AD7CC9F928B8B93E00595DD4 /* ACFTopContainerViewController.swift in Sources */,
 				ADEFCAC828BE59620054F9AB /* ACFFeedComponent.swift in Sources */,
+				AD975D3F28BF4DAD0054F9AB /* ACFPagingComponent.swift in Sources */,
 				ADEFCABE28BDF66F0054F9AB /* ACFFeedSectionController.swift in Sources */,
 				ADEFCAB828BDEE5D0054F9AB /* ACFEntryViewController.swift in Sources */,
 				ADEFCAC228BE57170054F9AB /* ACFSectionController.swift in Sources */,

@@ -11,8 +11,6 @@ class ACFFeedComponent: ACFBaseComponent {
 
     var initialSection = 0
     var sectionControllers: [ACFSectionController] = []
-    let firstCellHeight: CGFloat = round(UIScreen.main.bounds.height * 0.8)
-    var dragBeginY: CGFloat = 0
 
     required init(context: SimpleContainer) {
         super.init(context: context)
@@ -49,7 +47,9 @@ class ACFFeedComponent: ACFBaseComponent {
             sectionControllers.insert(c, at: 0)
             tableView.reloadData()
             tableView.scrollToRow(at: IndexPath(row: 0, section: 1), at: .top, animated: false)
-            dragBeginY = firstCellHeight
+
+            let paging = context.resolveObject(ACFPagingService.self)
+            paging?.update(contentY: tableView.contentOffset.y)
         }
     }
 
@@ -64,34 +64,8 @@ class ACFFeedComponent: ACFBaseComponent {
 extension ACFFeedComponent : UIScrollViewDelegate {
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-
-        print(String(format: "h %.0f v %+.2f target %4.0f begin %.0f", firstCellHeight, velocity.y, targetContentOffset.pointee.y, dragBeginY))
-
-        let targetY = targetContentOffset.pointee.y
-
-        scrollView.decelerationRate = .fast
-        if dragBeginY < firstCellHeight {
-            if targetY >= firstCellHeight * 0.5 || velocity.y > 0.1 {
-                targetContentOffset.pointee.y = firstCellHeight
-            } else {
-                targetContentOffset.pointee.y = 0
-            }
-        } else if dragBeginY == firstCellHeight {
-            if targetY < firstCellHeight * 0.5 || velocity.y < -0.1 {
-                targetContentOffset.pointee.y = 0
-            } else if targetY < firstCellHeight {
-                targetContentOffset.pointee.y = firstCellHeight
-            } else {
-                scrollView.decelerationRate = .normal
-            }
-        } else if dragBeginY > firstCellHeight {
-            if targetY < firstCellHeight {
-                targetContentOffset.pointee.y = firstCellHeight
-            } else {
-                scrollView.decelerationRate = .normal
-            }
-        }
-        dragBeginY = targetContentOffset.pointee.y
+        let paging = context.resolveObject(ACFPagingService.self)
+        paging?.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
 }
 
